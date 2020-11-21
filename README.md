@@ -24,6 +24,8 @@ THEN I can save my initials and score
 
 Site Mockup
 
+![image](https://user-images.githubusercontent.com/73137291/99881409-f9ddf200-2bd6-11eb-8eec-ba1c583ea42c.png)
+
 
 URL 
 
