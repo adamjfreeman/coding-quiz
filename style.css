@@ -1,0 +1,21 @@
+
+.head h1{
+    float: left;
+    font-size: 25px;
+}
+
+.head h2{
+    float: right;
+    font-size: 25px;
+}
+
+
+
+
+
+.card {
+ display: inline-block;
+ text-align: center;
+ margin-left: 50%;
+transform: translateX(-50%);
+}
