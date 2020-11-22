@@ -1,15 +1,21 @@
 
-.head h1{
+* {
+    font: 1em sans-serif;
+}
+
+
+.alignleft {
     float: left;
-    font-size: 25px;
+    font-size: 20px;
+    color: blueviolet;
+    padding-left: 25px;
+    padding-bottom: 10px;
 }
-
-.head h2{
+.alignright {
     float: right;
-    font-size: 25px;
+    font-size: 20px; 
+    padding-right: 50px;  
 }
-
-
 
 
 
@@ -19,3 +25,111 @@
  margin-left: 50%;
 transform: translateX(-50%);
 }
+
+.card button {
+    color: white;
+    background-color: rgb(67, 4, 150);
+    height: 60px;
+    width: 250px;
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+.card button:hover {
+    background-color: blueviolet;
+}
+
+.card h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.card h2 {
+    font-size: 28px;
+    
+}
+
+.element {
+    padding-top: 75px;
+}
+
+.element p {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.element h1 {
+    font-size: 28px;
+    font-weight: lighter;
+    display: block;
+    color: gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    text-align: left; 
+
+}
+
+.element button {
+    color: white;
+    background-color: rgb(67, 4, 150);
+    font-size: 20px;
+    height: 60px;
+    width: 750px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    text-align: left;   
+}
+
+.element button:hover{
+    background-color: blueviolet;
+}
+
+.score {
+    display: block;
+    text-align: left;
+    margin-left: 35%;
+    padding-top: 150px;
+   }
+
+
+   .score h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color:blueviolet;
+   }
+
+   .score h2 {
+    font-size: 35px;
+    font-weight: 200;
+   }
+
+   .score h3 {
+       font-size: 45px;
+       font-weight: bolder;
+   }
+
+   .score button {
+    color: white;
+    background-color: rgb(67, 4, 150);
+    height: 25px;
+    width: 100px;
+    border-radius: 15px;
+    font-size: 16px;
+   }
+
+   .score button:hover {
+    background-color: blueviolet;
+   }
+
+   
+

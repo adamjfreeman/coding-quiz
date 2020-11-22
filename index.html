@@ -13,16 +13,40 @@
     <div>
       <header>
           <div class="head">
-        <h1 id="high-score" class="btn">View High Scores</h1>       
-        <h2 id="timer">Time: 0</h2>
+        <h1 id="high-score" class="alignleft">View High Scores</h1>       
+        <h2 class="alignright" >Time:  <imput id="timer"></h2>
+        
+
             </div>
       </header>
-      <div class="card">
-          <h1> Quiz Challenge</h1>
-          <h2>Try to answer the following code related questions within the time limit 
+      <div class="card" id="strt">
+          <h1>Coding Quiz Challenge</h1>
+          <h2>Try to answer the following code-related questions within the time limit. 
                 Keep in mind that incorrect answers will penalize your score/time 
                 by ten seconds.</h2>
                 <button id="start-quiz" class="btn">Start Quiz</button>
         </div>
+
+        <Div class="element" id="quiz" style="display: none;">
+                <div id="question"><p>Question</p></div>
+                <div id="choices">
+                    <button class="choice" id="A" onclick="checkAnswer('A')">A</button> 
+                    <button class="choice" id="B" onclick="checkAnswer('B')">B</button> 
+                    <button class="choice" id="C" onclick="checkAnswer('C')">C</button> 
+                    <button class="choice" id="D" onclick="checkAnswer('D')">D</button> 
+                    <h1 class="mess" id="message"></h1>
+                </div>
+         </Div>
+         <div class="score" id="score-container" style="display: none;">
+          
+             <h1>All Done!</h1>
+            <h2>Your point total is ...<imput id="my-score"></h2>
+            <form id="initials">Enter Initials:
+                <input type="text" name="initials" id="Enter Your Initials"> <imput>
+                    <button class="submit" id="sub-button">Submit</button>
+            </form>
+        </div>
+
+
   </body>
 </html>
