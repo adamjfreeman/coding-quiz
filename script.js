@@ -82,7 +82,7 @@ function countdown() {
       else if (runningQuestionsIndex >= lastQuestionsIndex) {
           clearInterval(timeLeft);
       }
-      
+
     }, 1000);
     console.log(timeLeft)
   };
@@ -114,6 +114,7 @@ function checkAnswer(answer){
     }
     else {
         messageEl.textContent = ("Incorrect - 10 seconds off the clock!");
+        
         
     }
     if (runningQuestionsIndex < lastQuestionsIndex){
@@ -153,9 +154,17 @@ function getScore() {
         
         scoreEl.style.display = "none";
         leaderBoard.style.display = "block";  
-            listItemEl.className = "leaderboard-name";
-            listItemEl.innerHTML = "<ul class='name'>"+ showScore + "</ul>"; 
-            console.log(listItemEl.innerHTML)   
+
+        var  myList = document.getElementById("myList");
+        let newListItem = document.createElement ('li');
+
+        newListItem.innerHTML = taskNameInput + "-" + score;
+
+        console.log(newListItem);
+        
+
+        myList.appendChild(newListItem);
+            
             }
 
     }
