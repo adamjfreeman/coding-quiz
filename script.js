@@ -2,7 +2,7 @@
 
 
 var buttonEl = document.querySelector("#start-quiz");
-var buttonEl2 = document.querySelector("#save-score");
+var buttonEl2 = document.getElementById("save-score");
 var card = document.getElementById("#strt");
 var timerEl = document.getElementById("timer");
 var quiz = document.getElementById("quiz");
@@ -14,8 +14,8 @@ var choiceD = document.getElementById("D");
 var messageEl = document.getElementById("message");
 var scoreEl = document.getElementById("score-container");
 var myScore = document.getElementById("my-score");
-var formEl = document.querySelector("top-performer");
-
+var leaderBoard = document.getElementById("leaderboard");
+var highScores = document.querySelector("#leaderboard")
 var timeLeft = 60;
 
 //questions
@@ -69,8 +69,9 @@ function start(){
 
 function countdown() {
     var timeLeft = 60;
-    setInterval(function() {
-      timeLeft--;
+  setInterval(function() {
+        
+      timeLeft--; 
       if (timeLeft >= 0) {
         span = document.getElementById("timer");
         span.innerHTML = timeLeft;
@@ -78,7 +79,11 @@ function countdown() {
       if (timeLeft === 0) {
           getScore();
       }
+      else if (runningQuestionsIndex >= lastQuestionsIndex) {
+          
+      }
     }, 1000);
+    console.log(timeLeft)
   };
 
 
@@ -102,22 +107,21 @@ var score = 0
 
 function checkAnswer(answer){
     if(questions[runningQuestionsIndex].correct === answer) {
-        score += 10;
+        score += 100;
         messageEl.textContent = ("Correct - you got 10 points!");
         console.log(score);
     }
     else {
         messageEl.textContent = ("Incorrect - 10 seconds off the clock!");
-        timerEl = timeLeft-10;
-        
-
+        timeLeft -= 10;
+        document.getElementById("timer").innerHTML= timeLeft;
     }
     if (runningQuestionsIndex < lastQuestionsIndex){
         runningQuestionsIndex++;
         renderQuestion();
     }
     else{
-        clearInterval(timerEl);
+        timerEl.style.display ="none";
         getScore();
     }
 }
@@ -129,26 +133,41 @@ function getScore() {
     
       }
 
+      
+      
       var taskFormHandler = function(event) {
         event.preventDefault();
         var taskNameInput = document.getElementById("your-initials").value;
-        var showScore=(taskNameInput) + (score);
+        var showScore= {taskNameInput, score};
             console.log (showScore);
 
     if (taskNameInput == "") {
-        alert("please enter your initials");
+        alert("Please enter your initials.");
+        
+    }
+    else {
+        updateLeaderboard();
     }
 
-}
+    function updateLeaderboard() {
+        
+        scoreEl.style.display = "none";
+        leaderBoard.style.display = "block";  
+            listItemEl.className = "leaderboard-name";
+            listItemEl.innerHTML = "<ul class='name'>"+ showScore + "</ul>"; 
+            console.log(listItemEl.innerHTML)   
+            }
+
+    }
+
+
 
 buttonEl2.addEventListener('click',taskFormHandler);
 
-        
 
 
 
 
 
 
-      
-  
+
