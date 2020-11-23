@@ -80,7 +80,7 @@ function countdown() {
           getScore();
       }
       else if (runningQuestionsIndex >= lastQuestionsIndex) {
-          
+          clearInterval(timeLeft);
       }
     }, 1000);
     console.log(timeLeft)
@@ -113,8 +113,7 @@ function checkAnswer(answer){
     }
     else {
         messageEl.textContent = ("Incorrect - 10 seconds off the clock!");
-        timeLeft -= 10;
-        document.getElementById("timer").innerHTML= timeLeft;
+        document.getElementById("timer").value = timeLeft -10;
     }
     if (runningQuestionsIndex < lastQuestionsIndex){
         runningQuestionsIndex++;
