@@ -2,7 +2,7 @@
 
 
 var buttonEl = document.querySelector("#start-quiz");
-var buttonEl2 = document.querySelector("#high-score");
+var buttonEl2 = document.querySelector("#save-score");
 var card = document.getElementById("#strt");
 var timerEl = document.getElementById("timer");
 var quiz = document.getElementById("quiz");
@@ -14,6 +14,9 @@ var choiceD = document.getElementById("D");
 var messageEl = document.getElementById("message");
 var scoreEl = document.getElementById("score-container");
 var myScore = document.getElementById("my-score");
+var formEl = document.querySelector("top-performer");
+
+var timeLeft = 60;
 
 //questions
 
@@ -105,6 +108,8 @@ function checkAnswer(answer){
     }
     else {
         messageEl.textContent = ("Incorrect - 10 seconds off the clock!");
+        timerEl = timeLeft-10;
+        
 
     }
     if (runningQuestionsIndex < lastQuestionsIndex){
@@ -121,14 +126,29 @@ function getScore() {
     quiz.style.display = "none";
     scoreEl.style.display = "block";
     myScore.textContent = score;
+    
+      }
 
+      var taskFormHandler = function(event) {
+        event.preventDefault();
+        var taskNameInput = document.getElementById("your-initials").value;
+        var showScore=(taskNameInput) + (score);
+            console.log (showScore);
+
+    if (taskNameInput == "") {
+        alert("please enter your initials");
+    }
 
 }
 
+buttonEl2.addEventListener('click',taskFormHandler);
+
+        
 
 
 
 
 
 
+      
   
