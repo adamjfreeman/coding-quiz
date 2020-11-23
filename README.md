@@ -26,6 +26,10 @@ Site Mockup
 
 ![image](https://user-images.githubusercontent.com/73137291/99881409-f9ddf200-2bd6-11eb-8eec-ba1c583ea42c.png)
 
+My Mockup
+![coding screenshot](https://user-images.githubusercontent.com/73137291/99935371-c954a000-2d1d-11eb-9a9d-34d8deceda06.png)
 
-URL 
+
+
+URL - https://adamjfreeman.github.io/coding-quiz/
 
