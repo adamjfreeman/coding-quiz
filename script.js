@@ -68,7 +68,7 @@ function start(){
 }
 
 function countdown() {
-    var timeLeft = 60;
+  
   setInterval(function() {
         
       timeLeft--; 
@@ -114,6 +114,7 @@ function checkAnswer(answer){
     }
     else {
         messageEl.textContent = ("Incorrect - 10 seconds off the clock!");
+        timeLeft -= 10;
         
         
     }
